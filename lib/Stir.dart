@@ -2,7 +2,19 @@ import 'package:dynamic_list_view/DynamicListView.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-
+class Post extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: Column(
+      children: <Widget>[
+        Row(
+          children: <Widget>[],
+        )
+      ],
+    ));
+  }
+}
 
 class StirPage extends StatefulWidget {
   @override

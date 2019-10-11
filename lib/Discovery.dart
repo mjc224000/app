@@ -65,7 +65,16 @@ import 'dart:async';
            padding: EdgeInsets.symmetric(vertical: 8),
          ),
          Container(
-           child: Text("111"),
+           height: 200,
+           child: Container(
+             padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+             child: Image .asset("img/banner.jpg",fit: BoxFit.cover,),
+             decoration: BoxDecoration(
+               color: Colors.white
+             ),
+           ),
+         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 8),
+         decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.black12)]),
          )
        ],
      );
