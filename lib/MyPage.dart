@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-
-import 'package:qr_reader/qr_reader.dart';
+import 'package:barcode_scan/barcode_scan.dart';
 class Card extends StatelessWidget {
   Card({this.text = "", @required this.cb});
 
@@ -86,14 +85,9 @@ class MyPage extends StatelessWidget {
               Navigator.pushNamed(context, "/MyPageInfo");
             }),
         Card(text: "阅读记录", cb: () async {
-          Future<String> futureString = new QRCodeReader()
-              .setAutoFocusIntervalInMs(200) // default 5000
-              .setForceAutoFocus(true) // default false
-              .setTorchEnabled(true) // default false
-              .setHandlePermissions(true) // default true
-              .setExecuteAfterPermissionGranted(true) // default true
-              .scan();
-           print(futureString);
+         var futureString =await BarcodeScanner.scan();
+
+           print("$futureString,111111");
         }),
         Card(
           text: "我的博客",

@@ -5,7 +5,8 @@ import 'Stir.dart' show StirPage;
 import 'Discovery.dart' show DiscoveryPage;
 import 'Info.dart' show InfoPage;
 import 'MyPageInfo.dart' show MyPageInfo;
-
+import 'AlertPage.dart' show PopupDialog;
+import 'ChatScreen.dart' show ChatScreen;
 void main() {
   runApp(MyApp());
 }
@@ -17,8 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       initialRoute: "/",
+
       routes: {
-        "/MyPageInfo":(context)=>MyPageInfo()
+        "/MyPageInfo":(context)=>MyPageInfo(),
+        ChatScreen.routeName:(context)=>ChatScreen()
       },
       theme: ThemeData(
         primarySwatch: Colors.green,
